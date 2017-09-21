@@ -14,6 +14,11 @@ export class HomePage {
 
   }
 
+  openAbout(text) {
+   text = text || "Nothing was entered...";
+   this.navCtrl.push(AboutPage, {data: text});
+  }
+
   show(){
     let modal = this.modalCtrl.create(HelloPage);
     modal.present();

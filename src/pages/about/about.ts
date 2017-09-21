@@ -9,8 +9,10 @@ import { ContactPage } from '../contact/contact';
   templateUrl: 'about.html',
 })
 export class AboutPage {
+   text: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.text = navParams.get('data');
   }
 
   goTo(page) {
